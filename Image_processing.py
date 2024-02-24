@@ -102,7 +102,7 @@ def RGB_to_grayscale(image_array):
 def image_pipeline_with_resize(folder_path,height,width):
     images_data = []
     labels = []
-    size=(height,width)
+    size_=(width,height)
     Classes = os.listdir(folder_path)
 
     for i in range(len(Classes)):
@@ -119,7 +119,7 @@ def image_pipeline_with_resize(folder_path,height,width):
                 image = Image.open(image_path)
 
                 # Resize the images
-                img_resized = image.resize(size, Image.Resampling.LANCZOS)
+                img_resized = image.resize(size_, Image.Resampling.LANCZOS)
                 
                 # Convert the image to a NumPy array
                 image_array = np.array(img_resized)

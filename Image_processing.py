@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 
 
 # Function 1 images pipeline loader
+
 def image_pipeline(folder_path):
     images_data = []
     labels = []
@@ -39,6 +40,7 @@ def image_pipeline(folder_path):
 
 
 # Function 2 Divide the dataset to train, validation and test datasets
+
 def Dataset_division(features,labels,val_per,test_per):
     # Create lists for training, validation data and lists for test data
     train_features=[]
@@ -82,7 +84,16 @@ def Image_scalling(data_list):
 
 
 
+# Function 4 RGB to grayscale
 
+def RGB_to_grayscale(image_array):
+    length= len(image_array)
+    images_list=[]
+    for i in range(length):
+        # Compute the weighted sum to convert to grayscale
+        images_list.append(np.dot(image_array[i], [0.299, 0.587, 0.114]))
+
+    return images_list
 
 
 

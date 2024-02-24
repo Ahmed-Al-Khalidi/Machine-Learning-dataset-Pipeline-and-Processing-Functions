@@ -35,5 +35,5 @@ def image_pipeline(folder_path):
 
     return images_data, labels
 
-
+####
 

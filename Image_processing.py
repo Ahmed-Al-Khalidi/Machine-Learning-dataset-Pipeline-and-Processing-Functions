@@ -4,6 +4,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 
+
 # Function 1 images pipeline loader
 def image_pipeline(folder_path):
     images_data = []
@@ -35,6 +36,8 @@ def image_pipeline(folder_path):
 
     return images_data, labels
 
+
+
 # Function 2 Divide the dataset to train, validation and test datasets
 def Dataset_division(features,labels,val_per,test_per):
     # Create lists for training, validation data and lists for test data
@@ -64,4 +67,24 @@ def Dataset_division(features,labels,val_per,test_per):
         test_labels.append(labels[i3+train_len+val_len])
 
     return train_features,train_labels,val_features,val_labels,test_features,test_labels
+
+
+
+# Function 3 image rescalling the pixels to be between 0 to 1 
+
+def Image_scalling(data_list):
+    list_length=len(data_list)
+    new_data_list=[]
+    for i in range(list_length):
+        new_data_list.append((data_list[i]/255))
+
+    return new_data_list
+
+
+
+
+
+
+
+
 

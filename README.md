@@ -1,1 +1,1 @@
-Helo I am Ahmed
+This repository contains Python functions designed for efficiently loading custom image datasets and performing basic preprocessing tasks. These functions are particularly useful for preparing data to be used in machine learning models, especially with popular frameworks like TensorFlow.
